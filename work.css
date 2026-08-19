@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', Verdana, sans-serif; 
+    background-color: linen;   
+    margin: 0;
+    padding-top: 60px; /* Space for the fixed navbar */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 950px;
+    margin: 40px auto;
+    width: 95%;
+}
+
+h1 {
+    color: navy;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*----------------------
+        TABLE
+-------------------------*/
+
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow-x: auto; /* Allows horizontal scrolling on small mobile screens */
+}
+
+table {
+    width: 100%;                     
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 1.8em;
+    color: teal;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #fdfdfd;
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 1.05em;
+}
+
+th {
+    background-color: navy;           
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+}
+
+/* Highlight current/most recent job */
+tbody tr:first-child {
+    background-color: #e8f5e9; 
+    font-weight: bold;
+    border-left: 5px solid #4CAF50;
+}
+
+tbody tr:nth-child(2) {
+    background-color: #e8f5e9; 
+    font-weight: bold;
+    border-left: 5px solid #4CAF50;
+}
+
+tbody tr:hover {
+    background-color: #e0f2f1;
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}

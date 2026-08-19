@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jainil Patel - Website Feedback Form</title>
+   <link rel="icon" type="image/png" href="profilepic.png">
+   <link rel="stylesheet" href="feedback.css">
+   <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+
+<ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="work.html">Experience</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="articulate.html">Articulate</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="active" href="feedback.html">Feedback</a></li>
+</ul>
+
+   <h2>Website Feedback</h2>
+   <p id="form-subtitle">Please share your thoughts to help us improve.</p>
+   
+   <form action="/action_page.php" method="GET">
+      
+       <label for="fname">First name:</label><br>
+       <input type="text" id="fname" name="fname" value="Firstname"><br>
+       <label for="lname">Last name:</label><br>
+       <input type="text" id="lname" name="lname" value="Lastname"><br><br>
+
+
+       <label for="email">Email Address:</label><br>
+       <input type="text" id="email" name="user_email" value="example@domain.com">
+       <br><br>
+
+
+       <p>Reason for Feedback:</p>
+       <input type="radio" id="bug" name="feedback_reason">
+       <label for="bug" value="bug">Report a Bug</label>
+       <input type="radio" id="feature" name="feedback_reason">
+       <label for="feature" value="feature">Feature Request</label>
+       <input type="radio" id="design" name="feedback_reason">
+       <label for="design" value="design">Design/Layout</label>
+       <input type="radio" id="other" name="feedback_reason">
+       <label for="other" value="other">Other</label>
+       <br><br>
+
+
+       <p>How likely are you to recommend us?</p>
+       <input type="radio" id="very-likely" name="recommend" value="very-likely">
+       <label for="very-likely">Very Likely</label><br>
+       <input type="radio" id="neutral" name="recommend" value="neutral">
+       <label for="neutral">Neutral</label><br>
+       <input type="radio" id="unlikely" name="recommend" value="unlikely">
+       <label for="unlikely">Unlikely</label>
+       <br><br>
+
+
+       <p>Which devices do you use to access our site?</p>
+       <input type="checkbox" id="mobile" name="device" value="mobile">
+       <label for="mobile">Mobile</label><br>
+       <input type="checkbox" id="desktop" name="device" value="desktop">
+       <label for="desktop">Desktop</label><br>
+       <input type="checkbox" id="tablet" name="device" value="tablet">
+       <label for="tablet">Tablet</label>
+       <br><br>
+      
+       <label for="comments">Detailed Comments:</label><br>
+       <input type="textarea" id="comments" name="user_comments" value="Tell us more..."></input>
+       <br><br>
+
+
+       <button type="submit">Submit Feedback</button>
+       <button type="reset">Clear Form</button>
+
+
+   </form>
+
+<footer>
+    <p>&copy; 2026 Jainil Patel. All rights reserved.</p>
+    <p>
+        <a href="https://www.linkedin.com/in/jainil-patel-569a37387/">LinkedIn</a> | 
+        <a href="mailto:pateljainil050607@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>

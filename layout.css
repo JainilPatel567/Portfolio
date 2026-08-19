@@ -1,0 +1,212 @@
+/* =========================================
+   GLOBAL LAYOUT & NAVBAR (layout.css)
+   ========================================= */
+
+body {
+    /* Removes default browser margins */
+    margin: 0;
+    /* Adds space at the top so the fixed navbar doesn't cover content */
+    padding-top: 60px; 
+    /* Uses Flexbox to manage the overall page structure */
+    display: flex;
+    flex-direction: column;
+    /* Ensures the body is at least the full height of the screen */
+    min-height: 100vh; 
+    /* Defines a clean, professional font stack */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets a light grey/green background color */
+    background-color: #f4f7f6; 
+}
+
+.navbar {
+    /* Removes bullet points from the list */
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    background-color: navy;
+    /* Keeps the bar at the top of the screen while scrolling */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    /* Makes the bar span the full width of the browser */
+    width: 100%;
+    /* Ensures the navbar stays on top of other elements */
+    z-index: 1000; 
+    /* Uses Flexbox to center the links horizontally */
+    display: flex;
+    justify-content: center;
+    /* Adds a shadow to create depth/separation from the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.navbar li {
+    /* Ensures list items behave like blocks */
+    display: block;
+}
+
+.navbar li a {
+    display: block; /* Makes the whole area around the text clickable */
+    color: white;
+    text-align: center;
+    /* Vertical and horizontal spacing inside the link */
+    padding: 16px 20px;
+    /* Removes the default blue underline */
+    text-decoration: none;
+    font-weight: bold;
+    /* Smoothly fades the color change over 0.3 seconds */
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for when you hover OR when the link is the 'active' page */
+.navbar li a:hover, .navbar li a.active {
+    background-color: teal;
+}
+
+/* =========================================
+   MAIN CONTENT & TYPOGRAPHY
+   ========================================= */
+
+.main-content {
+    /* Limits the width for better readability on wide screens */
+    max-width: 800px;
+    /* Centers the box horizontally and adds vertical space */
+    margin: 40px auto; 
+    /* Padding inside the box (between text and border) */
+    padding: 40px; 
+    /* Box Model Styling: Creates the 'White Card' look */
+    background-color: white;
+    border-radius: 12px; /* Rounds the corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /*black on color att.*/
+    border-top: 5px solid teal; /* Decorative line at the top */
+}
+
+h1 {
+    color: navy;
+    font-weight: 700;
+    text-align: center;
+    /* Adds space between individual letters */
+    letter-spacing: 2px;
+    /* Adds a very light shadow to the text itself */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /*black on color att.*/
+}
+
+h2 {
+    color: teal; /* Makes secondary titles teal */
+    border-bottom: 2px solid #eee; /* Adds a light grey line under the title */
+    padding-bottom: 10px; /* Space between text and that bottom line */
+    margin-top: 0; /* Removes top gap */
+}
+
+.main-content p {
+    color: #444; 
+    font-size: 1.1em;
+    /* Increases space between lines of text (Leading) */
+    line-height: 1.8; 
+    text-align: center; 
+}
+
+/* =========================================
+   PROFILE PICTURE
+   ========================================= */
+
+#profile-pic {
+    display: block;
+    /* Centers the image within its container */
+    margin: 20px auto;
+    /* Makes the square image a perfect circle */
+    border-radius: 50%;
+    border: 4px solid teal;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 200px; 
+    height: 150px;
+    /* Ensures the image isn't stretched; it crops to fill the circle */
+    object-fit: cover;
+    /* Prepares the image for the hover animation below(smooth) */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+#profile-pic:hover {
+    /* Makes the image grow slightly (5%) when hovered */
+    transform: scale(1.05);
+    /* Enhances the shadow to make it look like it's lifting up */
+    box-shadow: 0 8px 16px rgba(0, 128, 128, 0.4); /* on color att.(rgba)Glows teal on hover */
+}
+
+/* =========================================
+   GLOBAL FOOTER STYLING
+   ========================================= */
+
+footer {
+    width: 100%; 
+    text-align: center;
+    background-color: navy;
+    color: white;
+    padding: 20px 0;
+    /* Pushes the footer to the bottom of the page if content is short */
+    margin-top: auto; 
+    /* Ensures padding doesn't increase the width beyond 100% */
+    box-sizing: border-box;
+    position: bottom fixed;
+}
+
+footer a {
+    color: lightblue;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+footer a:hover {
+    color: white; 
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (Mobile & Tablets)
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        /* Removes fixed position so it scrolls with the page on mobile */
+        position: static; 
+        /* Stacks links vertically instead of side-by-side */
+        flex-direction: column;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar li a {
+        /* Adds a faint line between links on mobile menu */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px;
+    }
+
+    body {
+        /* Since navbar is no longer fixed, we don't need top padding */
+        padding-top: 0;
+    }
+
+    .content-box, form, .main-content {
+        /* Makes containers wider (90% of screen) on small devices */
+        width: 90% !important;
+        margin: 20px auto !important;
+        padding: 20px !important;
+    }
+
+    table {
+        /* Allows tables to scroll horizontally if they are too wide */
+        display: block;
+        overflow-x: auto; 
+        white-space: nowrap;
+        width: 100% !important;
+    }
+
+    img#profile-pic {
+        /* Shrinks the profile pic slightly for small screens */
+        width: 100% !important;
+        max-width: 200px;
+        height: auto !important;
+    }
+}

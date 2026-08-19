@@ -1,0 +1,61 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+header {
+    background-color: #666a6e;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+}
+
+.content-box {
+    width: 70%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.message-one {
+    font-family: "Times New Roman", Times, serif;/* Elegant, classic serif font */
+    color: #8b0000;
+    font-size: 28px;
+    font-style: italic;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.message-two {
+    font-family: Arial, Helvetica, sans-serif;/* Clean, modern sans-serif font */
+    color: #0000ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+    padding: 20px;
+}
+
+.message-three {
+    font-family: "Courier New", Courier, monospace;/* Typewriter-style font */
+    color: #006400;
+    background-color: #effff0;
+    font-size: 22px;
+    text-decoration: underline;
+    text-align: right;
+    padding: 20px;
+}
+
+.message-four {
+    font-family: Verdana, Geneva, sans-serif;/* Wide, readable sans-serif font */
+    color: #ff4500;
+    font-size: 32px;
+    /* Adds a drop shadow: 2px right, 2px down, 5px blur, light grey color */
+    text-shadow: 2px 2px 5px #cccccc;
+    text-align: center;
+    padding: 20px;
+}
